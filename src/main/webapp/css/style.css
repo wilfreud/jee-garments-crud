@@ -1,0 +1,136 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: #333;
+    padding: 10px;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.navbar-link:hover {
+    background: #555;
+}
+
+.garment-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.garment-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.garment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.garment-name {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.garment-category, .garment-status, .garment-location {
+    margin-bottom: 10px;
+}
+
+.garment-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit, .btn-delete, .btn-submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-edit {
+    background: #28a745;
+    color: #fff;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: #fff;
+}
+
+.btn-submit {
+    background: #007bff;
+    color: #fff;
+}
+
+.btn-edit:hover, .btn-delete:hover, .btn-submit:hover {
+    opacity: 0.9;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Animation pour les cartes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.garment-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Animation pour les boutons */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.btn-edit:hover, .btn-delete:hover, .btn-submit:hover {
+    animation: pulse 0.5s infinite;
+}
