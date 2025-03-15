@@ -64,6 +64,7 @@ public class GarmentDAO {
         
         ps.executeUpdate();
     } catch (SQLException e) {
+    	System.err.println("Error in SQL stmt preparation");
         e.printStackTrace();
     }
 }

@@ -114,6 +114,51 @@ body {
     margin-top: 20px;
 }
 
+/* Styles pour la liste des utilisateurs */
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.user-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-name {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-add {
+    background: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.btn-add:hover {
+    opacity: 0.9;
+}
+
 /* Animation pour les cartes */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -133,4 +178,14 @@ body {
 
 .btn-edit:hover, .btn-delete:hover, .btn-submit:hover {
     animation: pulse 0.5s infinite;
+}
+
+/* Animation pour les cartes utilisateur */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.user-card {
+    animation: slideIn 0.5s ease-out;
 }
